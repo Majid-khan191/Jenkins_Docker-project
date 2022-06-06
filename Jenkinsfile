@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Git clone') {
             steps {
-              sh 'sudo git clone https://github.com/Armaan-zaheer/pipeline-jenkins.git'
+              sh 'sudo git clone https://github.com/Majid-khan191/jenkins_Docker-project.git'
             }
         }
         stage('Initialize'){
@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Deploy App'){
             steps{
-                sh "sudo cp ./pipeline-jenkins/docker-compose.yml . | sudo cp ./pipeline-jenkins/Dockerfile . | sudo cp ./pipeline-jenkins/server.js . "
+                sh "sudo cp ./Jenkins_Docker-project/docker-compose.yml . | sudo cp ./Jenkins_Docker-project/Dockerfile . | sudo cp ./Jenkins_Docker-project/server.js . "
                 sh "sudo docker-compose up -d"
             }
         }
